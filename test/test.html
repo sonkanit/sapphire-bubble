@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>unit tests</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <script src="../bower_components/web-component-tester/browser.js"></script>
+
+  <link rel="import" href="../bower_components/uifr-app/uifr-app.html">
+  <link rel="import" href="../sapphire-bubble.html">
+  <link rel="import" href="../bower_components/uifr-component-tester/uifr-component-tester.html">
+</head>
+<body is="uifr-app" theme="charcoal" unresolved>
+
+  <test-fixture id="default">
+    <template>
+      <sapphire-bubble></sapphire-bubble>
+    </template>
+  </test-fixture>
+
+  <script>
+    describe('<sapphire-bubble>', function () {
+
+      var el;
+
+      it('Contains the correct structure', function () {
+        el = fixture('default');
+        // simple comparison
+        assert.equal(el, el, 'elements are equal');
+      });
+
+      it('Contains the correct structure 2', function (done) {
+        el = fixture('default');
+
+        var before = el;
+
+        // trigger click
+        MockInteractions.tap(el);
+
+        flush(function () {
+          var after = el;
+
+          assert.equal(before, el, 'before interaction elements should be equal');
+          assert.equal(after, el, 'after interaction elements should be equal');
+
+          done();
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

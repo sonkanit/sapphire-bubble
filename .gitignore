@@ -1,0 +1,10 @@
+node_modules/
+bower_components/
+test/reports/
+*.lock
+npm-debug.log
+.vscode
+.idea
+.DS_Store
+desktop.ini
+tmp

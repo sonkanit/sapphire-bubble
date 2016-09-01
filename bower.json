@@ -1,0 +1,25 @@
+{
+  "name": "sapphire-bubble",
+  "authors": [
+    "Thomson Reuters Eikon"
+  ],
+  "description": "",
+  "keywords": [],
+  "main": "sapphire-bubble.html",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/thomsonreuters/sapphire-bubble/",
+  "ignore": [
+    "/.gitignore",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "uifr-app": "*"
+  },
+  "devDependencies": {
+    "uifr-component-tester": "^1.0.0"
+  },
+  "x-meta": {
+    "released": false
+  }
+}
